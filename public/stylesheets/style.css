@@ -1,8 +1,37 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(172, 41, 212);
+  color: black;
+  text-align: center;
+}
+
+.delete-form {
+  display: inline-block;
+  margin-right: 20px;
+}
+	
+.delete-form button {
+  color: rgb(95, 214, 79);
+}
+	
+li {
+  list-style: none;
+  text-align: left;
+  margin-right: 5rem;
+}
+
+.submitBtn {
+  color: black;
+  border: none;
 }
 
 a {
-  color: #00B7FF;
+  color: black;
+}
+
+nav ul { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
