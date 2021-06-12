@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <%- include('../partials/head.ejs') %>
 <body>
     <h1>Skills <%= time %></h1>
+    <%- include('../partials/nav.ejs') %>
     <ul>
-        <% skills.forEach((s) => { %> 
+        <% skills.forEach(function(s) { %>
             <li>
-                <form action="/skills/<%= s.id %>?_method=DELETE" class="delete-form" method="POST"> 
-                    <button type="submit">x</button>   
+                <form action="/skills/<%= s.id %>?_method=DELETE"
+                    class="delete-form" method="POST">
+                    <button type="submit">X</button>
                 </form>
-                <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-                -
-                <%= s.done ? 'done' : 'not done' %> 
+              <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+                - 
+              <%= s.done ? 'done' : 'not done' %>
             </li>
-        <% }); %>
+          <% }); %>
     </ul> 
-    <a href="/skills/new">Add skill</a>
+    <a href="/skills/new">Add Skill</a><br>
 </body>
 </html>

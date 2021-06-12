@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+    <%- include('../partials/head.ejs') %>
 <body>
-  <h1>New Skill</h1>
+    <h1>New Skill</h1>
+    <%- include('../partials/nav.ejs') %>
   <form action="/skills" method="POST" autocomplete="off">
-    <input type="text" name="skill">
-    <button type="submit">Add Skill</button>
+    <input type="text" name="skill" placeholder="New Skill..">
+    <button type="submit" class='submitBtn'>Save Skill</button>
   </form>
+  <%- include('../partials/footer.ejs') %>
 </body>
-</html> 

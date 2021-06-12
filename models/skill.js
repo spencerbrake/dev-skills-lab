@@ -4,7 +4,6 @@ const skills = [
     {id: 3, skill: 'Javascript', done: true},
     {id: 4, skill: 'Node.js', done: false},
     {id: 5, skill: 'Express.js', done: false},
-    {id: 6, skill: 'React', done: false}
 ]; 
 
 module.exports = {
@@ -38,4 +37,4 @@ module.exports = {
     const idx = skills.findIndex(skill => skill.id === parseInt(id))
     skills[idx].skill = newSkill.skill
     skills[idx].done = newSkill.done === 'on' ? true : false
-  };
+  }
